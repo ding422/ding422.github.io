@@ -77,8 +77,13 @@
         <span class="slider round"></span>
     </label>
     <h1 id="text1">Text 1</h1>
-    <input type="button" name="button1" value="Load common js">
-    <input type="button" name="button2" value="Test function in common js">
+    <button id="button1">Load common js</button>
+    <button id="button2">Test function in common js</button>
+    <script type="text/javascript">
+        if (loadCommonJS) {
+            loadCommonJS.postMessage("Trigger load common js from webview");
+        }
+    </script>
 </body>
 
 </html>
