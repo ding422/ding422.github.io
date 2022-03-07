@@ -77,11 +77,13 @@
         <span class="slider round"></span>
     </label>
     <h1 id="text1">Text 1</h1>
-    <button id="button1">Load common js</button>
-    <button id="button2">Test function in common js</button>
+    <button id="button1" onclick="triggerLoadCommonJS()">Load common js</button>
+    <button id="button2" onclick="getLoginToken()">Test function in common js</button>
     <script type="text/javascript">
-        if (loadCommonJS) {
-            loadCommonJS.postMessage("Trigger load common js from webview");
+        function triggerLoadCommonJS() {
+            if (loadCommonJS) {
+                loadCommonJS.postMessage("Trigger load common js from webview");
+            }
         }
     </script>
 </body>
